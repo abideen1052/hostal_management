@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "936976849152",
+    "project_id": "boys-hostel-2ea72",
+    "storage_bucket": "boys-hostel-2ea72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936976849152:android:bf42fb15637b653f98fbe5",
+        "android_client_info": {
+          "package_name": "com.example.myproject1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936976849152-2kkpshplogdghn88a8os8p3acuu72bar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myproject1",
+            "certificate_hash": "49c06982c1faa6ac37d21db038e6fbcc28354b5f"
+          }
+        },
+        {
+          "client_id": "936976849152-gbfd5i5acm9nnl5ed5cuunovkc3hf97t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK_8upfw8dYLiwamJMN8YnOUp7WtJE8zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936976849152-gbfd5i5acm9nnl5ed5cuunovkc3hf97t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

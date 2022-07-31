@@ -1,0 +1,12 @@
+if (_formKey1.currentState!.validate()) {
+                    checkPassword(context);
+                  } else {
+                    // ignore: avoid_print
+                    print('Data Empty');
+                  }
+                  if (_formKey.currentState!.validate()) {
+                    checkPassword(context);
+                  } else {
+                    // ignore: avoid_print
+                    print('Data Empty');
+                  }
