@@ -154,7 +154,7 @@ class _ScreenStaffState extends State<ScreenStaff> {
                   Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (context) => screen_sd_details()));
+                          builder: (context) => SrcreenStudenRegister()));
                 },
                 child: Container(
                   margin: EdgeInsets.all(10),

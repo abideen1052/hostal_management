@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:myproject1/screens/widgets/form_widget.dart';
+import 'package:myproject1/db/functions/db_functions.dart';
+import 'package:myproject1/db/model/data_model.dart';
 
-class screen_sd_details extends StatefulWidget {
-  const screen_sd_details({Key? key}) : super(key: key);
+class SrcreenStudenRegister extends StatelessWidget {
+  SrcreenStudenRegister({Key? key}) : super(key: key);
+  final _nameController = TextEditingController();
+  final _adnoController = TextEditingController();
+  final _semController = TextEditingController();
+  final _deptController = TextEditingController();
+  final _roomnoController = TextEditingController();
+  final _mobnoController = TextEditingController();
 
-  @override
-  State<screen_sd_details> createState() => _screen_sd_detailsState();
-}
-
-class _screen_sd_detailsState extends State<screen_sd_details> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +24,174 @@ class _screen_sd_detailsState extends State<screen_sd_details> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            FormWidget(label: 'Name'),
-            FormWidget(label: 'Admission no:'),
-            FormWidget(label: 'Semester :'),
-            FormWidget(label: 'Department :'),
-            FormWidget(label: 'Room no :'),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Name :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _nameController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Adm.no :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _adnoController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Semester :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _semController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Department :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _deptController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Room no :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _roomnoController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 300,
+                top: 20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 90,
+                    child: Text('Mob no :'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: 400,
+                    height: 40,
+                    child: TextFormField(
+                      controller: _mobnoController,
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.black, width: 200))),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             SizedBox(
               height: 25,
             ),
@@ -36,9 +199,11 @@ class _screen_sd_detailsState extends State<screen_sd_details> {
               padding: const EdgeInsets.only(right: 150),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.black),
-                onPressed: () {},
+                onPressed: () {
+                  onAddStudentButtonClicked();
+                },
                 child: Text(
-                  'Submit',
+                  'Add Student',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
@@ -47,5 +212,33 @@ class _screen_sd_detailsState extends State<screen_sd_details> {
         ),
       ),
     );
+  }
+
+  Future<void> onAddStudentButtonClicked() async {
+    final _name = _nameController.text.trim();
+    final _adno = _adnoController.text.trim();
+    final _sem = _semController.text.trim();
+    final _dept = _deptController.text.trim();
+    final _roomno = _roomnoController.text.trim();
+    final _mobno = _mobnoController.text.trim();
+    if (_name.isEmpty ||
+        _adno.isEmpty ||
+        _sem.isEmpty ||
+        _dept.isEmpty ||
+        _roomno.isEmpty ||
+        _mobno.isEmpty) {
+      return;
+    }
+    print('$_name $_sem');
+
+    final _student = StudentRegisterModel(
+        name: _name,
+        adno: _adno,
+        sem: _sem,
+        dept: _dept,
+        room: _roomno,
+        mob: _mobno);
+
+    addStudent(_student);
   }
 }

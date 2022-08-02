@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myproject1/screens/complaint_view.dart';
-import 'package:myproject1/screens/contactus.dart';
-import 'package:myproject1/screens/login_screen.dart';
-import 'package:myproject1/screens/allotment.dart';
+
 import 'package:myproject1/screens/complaint.dart';
-import 'package:myproject1/screens/packages.dart';
+
 import 'package:myproject1/screens/screen_login.dart';
 import 'package:myproject1/screens/staff.dart';
 import 'package:myproject1/screens/student_reg.dart';
@@ -155,7 +153,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => screen_sd_details()));
+                            builder: (context) => SrcreenStudenRegister()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),

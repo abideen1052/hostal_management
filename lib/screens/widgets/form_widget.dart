@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class FormWidget extends StatelessWidget {
   final String label;
-  const FormWidget({
+
+  FormWidget({
     Key? key,
     required this.label,
   }) : super(key: key);
@@ -26,7 +27,7 @@ class FormWidget extends StatelessWidget {
           SizedBox(
             width: 400,
             height: 40,
-            child: TextField(
+            child: TextFormField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 200))),
