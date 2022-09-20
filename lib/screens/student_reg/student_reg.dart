@@ -229,7 +229,6 @@ class SrcreenStudenRegister extends StatelessWidget {
         _mobno.isEmpty) {
       return;
     }
-    print('$_name $_sem');
 
     final _student = StudentRegisterModel(
         name: _name,

@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:myproject1/screens/admin_page.dart';
-import 'package:myproject1/screens/complaint_view.dart';
-import 'package:myproject1/screens/screen_login.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:myproject1/db/model/data_model.dart';
+import 'package:myproject1/presentation/admin/admin_page.dart';
 import 'package:myproject1/screens/homepage.dart';
-import 'package:myproject1/screens/login_screen.dart';
-import 'package:myproject1/screens/student_reg.dart';
-// import 'package:url_launcher/url_launcher.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:cloud_firestore/cloud_firestore.dart';
-// import 'package:google_sign_in/google_sign_in.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  if (!Hive.isAdapterRegistered(StudentRegisterModelAdapter().typeId)) {
+    Hive.registerAdapter(StudentRegisterModelAdapter());
+  }
   runApp(MyApp());
 }
 
@@ -26,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: ScreenAdmin(),
+      home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

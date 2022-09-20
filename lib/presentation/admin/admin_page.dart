@@ -3,9 +3,10 @@ import 'package:myproject1/screens/complaint_view.dart';
 
 import 'package:myproject1/screens/complaint.dart';
 
-import 'package:myproject1/screens/screen_login.dart';
+import 'package:myproject1/presentation/login/screen_login.dart';
+import 'package:myproject1/presentation/student_details/screen_student_list.dart';
 import 'package:myproject1/screens/staff.dart';
-import 'package:myproject1/screens/student_reg.dart';
+import 'package:myproject1/screens/student_reg/student_reg.dart';
 
 class ScreenAdmin extends StatefulWidget {
   @override
@@ -64,7 +65,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                           size: 40.0,
                         ),
                         Text(
-                          " view Complaints",
+                          " Attendance",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -81,7 +82,43 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                            builder: (context) => ScreenComplaintView()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    height: 60.0,
+                    width: 250.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Color.fromARGB(255, 224, 145, 41),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          Icons.assignment,
+                          color: Colors.black,
+                          size: 40.0,
+                        ),
+                        Text(
+                          " View Complaints",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'OpenSans',
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => StudentList()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -100,7 +137,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                           size: 40.0,
                         ),
                         Text(
-                          "student details",
+                          "Student Details",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -136,7 +173,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                           size: 40.0,
                         ),
                         Text(
-                          "Outgoing register",
+                          "Outgoing Register",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -172,7 +209,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                           size: 40.0,
                         ),
                         Text(
-                          "student registration",
+                          "Student Registration",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -208,7 +245,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                           size: 40.0,
                         ),
                         Text(
-                          "staff ",
+                          "Staff ",
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,

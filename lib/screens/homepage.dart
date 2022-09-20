@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:myproject1/presentation/complaints/complaint_reg_form.dart';
+
 import 'package:myproject1/screens/contactus.dart';
 import 'package:myproject1/screens/login_screen.dart';
 import 'package:myproject1/screens/allotment.dart';
 import 'package:myproject1/screens/complaint.dart';
 import 'package:myproject1/screens/packages.dart';
-import 'package:myproject1/screens/screen_login.dart';
+import 'package:myproject1/presentation/login/screen_login.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -44,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                            builder: (context) => ComplaintRegisterForm()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),

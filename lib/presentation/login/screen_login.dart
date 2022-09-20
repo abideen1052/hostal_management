@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:myproject1/screens/admin_page.dart';
+import 'package:myproject1/presentation/admin/admin_page.dart';
 
 import 'package:myproject1/screens/homepage.dart';
 import 'package:myproject1/utilities/constants.dart';
@@ -132,24 +132,26 @@ class _ScreenLoginState extends State<ScreenLogin> {
                       height: 40,
                       width: 90,
                       child: ElevatedButton(
-                          style:
-                              ElevatedButton.styleFrom(primary: Colors.black),
-                          onPressed: () {
-                            if (_formKey1.currentState!.validate()) {
-                              checkPassword(context);
-                            } else {
-                              // ignore: avoid_print
-                              print('Data Empty');
-                            }
-                            if (_formKey.currentState!.validate()) {
-                              checkPassword(context);
-                            } else {
-                              // ignore: avoid_print
-                              print('Data Empty');
-                            }
-                          },
-                          child: Text('Login',
-                              style: TextStyle(color: Colors.white))),
+                        style: ElevatedButton.styleFrom(primary: Colors.black),
+                        onPressed: () {
+                          if (_formKey1.currentState!.validate()) {
+                            checkPassword(context);
+                          } else {
+                            // ignore: avoid_print
+                            print('Data Empty');
+                          }
+                          if (_formKey.currentState!.validate()) {
+                            checkPassword(context);
+                          } else {
+                            // ignore: avoid_print
+                            print('Data Empty');
+                          }
+                        },
+                        child: Text(
+                          'Login',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -164,13 +166,13 @@ class _ScreenLoginState extends State<ScreenLogin> {
   void checkPassword(BuildContext ctx) {
     var _username = _userController.text;
     var _password = _passwordController.text;
-    if (_username == 'admin' || _password == 'admin123') {
+    if (_username == 'ad' && _password == 'ad') {
       Navigator.of(ctx).pushReplacement(
         MaterialPageRoute(builder: (ctx) {
           return ScreenAdmin();
         }),
       );
-    } else if (_username == 'student' || _password == 'student123') {
+    } else if (_username == 'st' && _password == 'st') {
       Navigator.of(ctx).pushReplacement(
         MaterialPageRoute(builder: (ctx) {
           return MyHomePage();

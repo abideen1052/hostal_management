@@ -3,8 +3,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:myproject1/screens/complaint.dart';
 import 'package:myproject1/screens/complaint_view.dart';
-import 'package:myproject1/screens/screen_login.dart';
-import 'package:myproject1/screens/student_reg.dart';
+import 'package:myproject1/presentation/login/screen_login.dart';
+import 'package:myproject1/screens/student_reg/student_reg.dart';
 
 class ScreenStaff extends StatefulWidget {
   const ScreenStaff({Key? key}) : super(key: key);

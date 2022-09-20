@@ -23,14 +23,15 @@ class _ScreenComplaintViewState extends State<ScreenComplaintView> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
+                Container(
+                  decoration: BoxDecoration(border: Border.all(width: 2)),
                   height: 200,
                   width: 600,
                 ),
                 Container(
+                  decoration: BoxDecoration(border: Border.all(width: 2)),
                   height: 200,
                   width: 600,
-                  color: Colors.black,
                 )
               ],
             )
