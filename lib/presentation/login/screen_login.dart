@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:myproject1/presentation/admin/admin_page.dart';
 
-import 'package:myproject1/screens/homepage.dart';
+import 'package:myproject1/presentation/student/homepage.dart';
 import 'package:myproject1/utilities/constants.dart';
 
 class ScreenLogin extends StatefulWidget {

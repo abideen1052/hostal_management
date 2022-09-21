@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myproject1/db/functions/db_functions.dart';
+import 'package:myproject1/db/model/data_model.dart';
 
 class ComplaintRegisterForm extends StatelessWidget {
   ComplaintRegisterForm({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class ComplaintRegisterForm extends StatelessWidget {
                     onAddComplaintButtonClicked();
                   },
                   child: Text(
-                    'Login',
+                    'Submit',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -77,12 +78,7 @@ class ComplaintRegisterForm extends StatelessWidget {
       return;
     }
 
-    final _complaint = ComplaintRegisterModel(
-      complaint: _complaintReg,
-    );
-
+    final _complaint = ComplainRegisterodel(complaint: _complaintReg);
     addComplaint(_complaint);
   }
 }
-
-ComplaintRegisterModel({required String complaint}) {}

@@ -4,6 +4,8 @@ import 'package:myproject1/db/model/data_model.dart';
 
 ValueNotifier<List<StudentRegisterModel>> studentListNotifier =
     ValueNotifier([]);
+ValueNotifier<List<ComplainRegisterodel>> complaintListNotifier =
+    ValueNotifier([]);
 
 Future<void> addStudent(StudentRegisterModel value) async {
   final studentDB = await Hive.openBox<StudentRegisterModel>('student_db');
@@ -19,9 +21,16 @@ Future<void> getAllStudents() async {
   studentListNotifier.notifyListeners();
 }
 
-Future<void> addComplaint(StudentRegisterModel value) async {
-  final complaintDB = await Hive.openBox<StudentRegisterModel>('student_db');
+Future<void> addComplaint(ComplainRegisterodel value) async {
+  final complaintDB = await Hive.openBox<ComplainRegisterodel>('complaint_db');
   await complaintDB.add(value);
-  studentListNotifier.value.add(value);
-  studentListNotifier.notifyListeners();
+  complaintListNotifier.value.add(value);
+  complaintListNotifier.notifyListeners();
+}
+
+Future<void> getAllComplaints() async {
+  final complaintDB = await Hive.openBox<ComplainRegisterodel>('complaint_db');
+  complaintListNotifier.value.clear();
+  complaintListNotifier.value.addAll(complaintDB.values);
+  complaintListNotifier.notifyListeners();
 }

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myproject1/presentation/billpayment/bill_payment.dart';
 import 'package:myproject1/presentation/complaints/complaint_reg_form.dart';
+import 'package:myproject1/presentation/details/details.dart';
+import 'package:myproject1/presentation/outgoing/outgoing.dart';
 
-import 'package:myproject1/screens/contactus.dart';
-import 'package:myproject1/screens/login_screen.dart';
-import 'package:myproject1/screens/allotment.dart';
-import 'package:myproject1/screens/complaint.dart';
-import 'package:myproject1/screens/packages.dart';
 import 'package:myproject1/presentation/login/screen_login.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -82,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                            builder: (context) => BillPayment()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -118,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                            builder: (context) => OutgoingRegister()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -151,10 +149,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                    Navigator.push(context,
+                        new MaterialPageRoute(builder: (context) => Details()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -167,11 +163,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        // Icon(
-                        //Icons.currency_rupee,
-                        // color: Colors.black,
-                        // size: 40.0,
-                        // ),
                         Text(
                           "View Details",
                           style: TextStyle(

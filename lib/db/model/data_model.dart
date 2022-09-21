@@ -31,7 +31,7 @@ class ComplainRegisterodel {
   @HiveField(0)
   final String complaint;
 
-  ComplainRegisterodel(
-    this.complaint,
-  );
+  ComplainRegisterodel({
+    required this.complaint,
+  });
 }

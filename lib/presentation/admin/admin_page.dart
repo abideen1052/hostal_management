@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:myproject1/screens/complaint_view.dart';
+import 'package:myproject1/presentation/complaints/complaint_vie.dart';
 
-import 'package:myproject1/screens/complaint.dart';
+import 'package:myproject1/presentation/outgoing/outgoing.dart';
+import 'package:myproject1/presentation/staff/screen_staff.dart';
+import 'package:myproject1/presentation/attendence/attendance.dart';
+import 'package:myproject1/presentation/student_reg/student_reg.dart';
 
 import 'package:myproject1/presentation/login/screen_login.dart';
 import 'package:myproject1/presentation/student_details/screen_student_list.dart';
-import 'package:myproject1/screens/staff.dart';
-import 'package:myproject1/screens/student_reg/student_reg.dart';
 
 class ScreenAdmin extends StatefulWidget {
   @override
@@ -46,7 +47,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => ScreenComplaintView()));
+                            builder: (context) => ScreenAttendance()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -82,7 +83,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => ScreenComplaintView()));
+                            builder: (context) => ComplaintView()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -154,7 +155,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => Complaints()));
+                            builder: (context) => OutgoingRegister()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
@@ -226,7 +227,7 @@ class _ScreenAdminState extends State<ScreenAdmin> {
                     Navigator.push(
                         context,
                         new MaterialPageRoute(
-                            builder: (context) => ScreenStaff()));
+                            builder: (context) => StaffScreen()));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),

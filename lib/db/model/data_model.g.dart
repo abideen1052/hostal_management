@@ -66,7 +66,7 @@ class ComplainRegisterodelAdapter extends TypeAdapter<ComplainRegisterodel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return ComplainRegisterodel(
-      fields[0] as String,
+      complaint: fields[0] as String,
     );
   }
 
