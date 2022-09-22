@@ -57,6 +57,7 @@ class ComplaintRegisterForm extends StatelessWidget {
                   style: ElevatedButton.styleFrom(primary: Colors.black),
                   onPressed: () {
                     onAddComplaintButtonClicked();
+                    Navigator.of(context).pop();
                   },
                   child: Text(
                     'Submit',

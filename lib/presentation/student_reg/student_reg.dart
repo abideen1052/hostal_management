@@ -201,6 +201,7 @@ class SrcreenStudenRegister extends StatelessWidget {
                 style: ElevatedButton.styleFrom(primary: Colors.black),
                 onPressed: () {
                   onAddStudentButtonClicked();
+                  Navigator.of(context).pop();
                 },
                 child: Text(
                   'Add Student',

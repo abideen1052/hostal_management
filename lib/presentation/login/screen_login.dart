@@ -166,7 +166,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
   void checkPassword(BuildContext ctx) {
     var _username = _userController.text;
     var _password = _passwordController.text;
-    if (_username == 'admmin' && _password == 'admin123') {
+    if (_username == 'admin' && _password == 'admin123') {
       Navigator.of(ctx).pushReplacement(
         MaterialPageRoute(builder: (ctx) {
           return ScreenAdmin();
